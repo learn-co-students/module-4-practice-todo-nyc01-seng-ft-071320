@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CATEGORIES } from './data'
+import Category from './Containers/Category'
 
 class App extends React.Component {
 
@@ -34,13 +35,15 @@ class App extends React.Component {
         text: 'Tidy house',
         category: 'Misc'
       }
-    ]
+    ],
+
   }
 
   render() {
     return (
       <div className="App">
         <h2>My tasks</h2>
+        <Category tasks={this.state.tasks} categories={CATEGORIES}/>
       </div>
     );
   }
