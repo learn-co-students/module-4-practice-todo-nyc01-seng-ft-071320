@@ -47,7 +47,7 @@ class App extends React.Component {
       return this.state.tasks.map(el=><Task key={el.text} task={el.text} cat={el.category} delete={this.delete}/>)
     } else {
       let newArray = this.state.tasks.filter(el=>el.category===this.state.current)
-    return newArray.map(el=><Task key={el.text} task={el.text} cat={el.category} delete={this.delete}/>)
+      return newArray.map(el=><Task key={el.text} task={el.text} cat={el.category}/>)
     }
   }
   
